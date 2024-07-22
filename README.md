@@ -1,7 +1,8 @@
 # Conectar una Base de Datos MySQL con PHP utilizando PDO
 
 En esta rama, contiene el codigo para conectar una base de datos MySQL con PHP utilizando PDO en un servidor local.
-se adjunta el video de la explicación  `https://www.youtube.com/watch?v=dQw4w9WgXcQ`, el ID del video es `dQw4w9WgXcQ`.
+se adjunta el video de la explicación  [ver video ](https://youtu.be/eX8R5HG8slU)
+
 
 Este código mostrará una miniatura del video y, al hacer clic en ella, abrirá el video de YouTube en una nueva pestaña.
 
