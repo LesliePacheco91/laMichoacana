@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="fonts/css/all.css">
+	
+	<title></title>
+</head>
+<body class = "body-contend">	
+		<header class="head-home">
+			<img src="img/Logo Small Hi.png" width="100%">
+			<a class = "buttom-menu" href = "home.html"> <i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
+			<a class = "buttom-menu" href = "clientes.html"> <i class="fa fa-users-line" aria-hidden="true"></i> Clientes</a>
+			<a class = "buttom-menu" href = "carrito.html"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrito</a>
+			<a class = "buttom-menu" href = "index.html"><i class="fa fa-power-off"></i> Salir</a>
+		</header>
+		<section class = "content-data">
+
+			<div class ="head-data">
+				<h1>Productos</h1>
+				<div class = "shopping-cart">
+					<i class="fa fa-shopping-cart" aria-hidden="true"></i><h1 id ="total-shop"></h1>
+				</div>
+
+				<a href = "nuevoProducto.html" class="buttom-data"> <i class = "fa fa-upload"></i> Nuevo Producto</a>
+			</div>
+			<div class = "body-data">
+				
+				<ul class = "content-card">
+					<li class = "card">
+						<img src = "products/fresa.webp" class = "img-data">
+						<h5>Nieve de Fresa</h5>
+						<h1>$12.75</h1>
+						<p icons>
+							<button class ="icon-card" id="icon-shop" onclick="adCard(1);" data-id = "1"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+						</p>
+					</li>
+					
+					<li class = "card">
+						<img src = "products/fresa-concrema.webp" class = "img-data">
+						<h5>Nieve Fresas con crema</h5>
+						<h1>$12.75</h1>
+						<p icons>
+							<button class ="icon-card" id="icon-shop" onclick="adCard(2);" ><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+						</p>
+					</li>
+
+					<li class = "card">
+						<img src = "products/nieve-mango-chamoy.webp" class = "img-data">
+						<h5>Nieve Mando y chamoy</h5>
+						<h1>$12.75</h1>
+						<p icons>
+							<button class ="icon-card"><i class="fa fa-trash" aria-hidden="true"></i></button>
+							<a href="modifica_producto.html" class = "icon-card"><i class="fa fa-file-edit" aria-hidden="true"></i></a>
+
+						</p>
+					</li>
+
+					<li class = "card">
+						<img src = "products/fresa-chicle.webp" class = "img-data">
+						<h5>Nieve de chicle</h5>
+						<h1>$12.75</h1>
+					</li>
+
+					<li class = "card">
+						<img src = "products/nieve-limon.webp" class = "img-data">
+						<h5>Nieve de limón</h5>
+						<h1>$12.75</h1>
+					</li>
+					
+					<li class = "card">
+						<img src = "products/paleta-kiwi.jpg" class = "img-data">
+						<h5>Paleta de Kiwi</h5>
+						<h1>$12.75</h1>
+					</li>
+
+					<li class = "card">
+						<img src = "products/paleta-piña.jpg" class = "img-data">
+						<h5>Paleta de Piña</h5>
+						<h1>$12.75</h1>
+					</li>
+
+					<li class = "card">
+						<img src = "products/fresa.webp" class = "img-data">
+						<h5>Nieve de Fresa</h5>
+						<h1>$12.75</h1>
+					</li>
+					
+					<li class = "card">
+						<img src = "products/fresa-concrema.webp" class = "img-data">
+						<h5>Nieve Fresas con crema</h5>
+						<h1>$12.75</h1>
+					</li>
+
+					<li class = "card">
+						<img src = "products/nieve-mango-chamoy.webp" class = "img-data">
+						<h5>Nieve Mando y chamoy</h5>
+						<h1>$12.75</h1>
+					</li>
+
+					<li class = "card">
+						<img src = "products/fresa-chicle.webp" class = "img-data">
+						<h5>Nieve de chicle</h5>
+						<h1>$12.75</h1>
+					</li>
+
+					<li class = "card">
+						<img src = "products/nieve-limon.webp" class = "img-data">
+						<h5>Nieve de limón</h5>
+						<h1>$12.75</h1>
+					</li>
+					
+					<li class = "card">
+						<img src = "products/paleta-kiwi.jpg" class = "img-data">
+						<h5>Paleta de Kiwi</h5>
+						<h1>$12.75</h1>
+					</li>
+
+					<li class = "card">
+						<img src = "products/paleta-piña.jpg" class = "img-data">
+						<h5>Paleta de Piña</h5>
+						<h1>$12.75</h1>
+					</li>
+				</ul>
+			</div>
+			
+		</section>
+</body>
+</html>
