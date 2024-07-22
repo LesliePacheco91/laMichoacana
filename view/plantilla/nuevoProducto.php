@@ -22,22 +22,30 @@
 				<h1>Nuevo Producto</h1>
 			</div>
 			<div class = "body-data">
-				
-				<form class = "contet-new" method="POST" enctype="multipart/formdata">
-					<input type="text" class = "new-input" name = "" placeholder="Nombre del producto">
-					<input type="number" class = "new-input" name = "" placeholder="$ precio del producto">
-					<input type="file" class = "new-input" name = "" placeholder="Imagen del producto">
-					<input type="submit" class = "button-new-input" value="Gudardar" name = "guardarProducto" placeholder="Imagen del producto">
+
+				<form class = "contet-new" method="POST" enctype = "multipart/form-data">
+					<input type="text" class = "new-input" name = "nombre" placeholder="Nombre del producto">
+					<input type="number" class = "new-input" name = "precio" placeholder="$ precio del producto">
+					<input type="number" class = "new-input" name = "existencia" placeholder="existencia del producto">
+					<input type="file" class ="new-input" name="img" placeholder="Imagen del producto">
+					<input type="submit" class = "button-new-input" value="Gudardar" name = "guardarProducto">
 				</form>
+
+				<?php 
+					if(isset($_POST['guardarProducto'])){
+
+						$imgSize = $_FILES['img']['size'];
+						$imgName = $_FILES['img']['name'];
+						$imgTmp = $_FILES['img']['tmp_name'];
+
+
+						$prod = productoController::inserProdController($_POST['nombre'], $_POST['precio'], $_POST['existencia'],$imgSize, $imgName, $imgTmp);
+
+						
+
+					}
+				?>
 			</div>
-
-			<?php 
-
-				if(isset($_POST['guardarProducto'])){
-					
-				}
-			?>
-			
 		</section>
 </body>
 </html>

@@ -11,23 +11,19 @@
 		<section class = "secction-login">
 			<img src="view/img/Logo Small Hi.png" class="img-login">
 			<form method = "POST" action="">
-				<input type= "text" name = "nombre" class = "data-input" placeholder="Ingresa tu nombre">
+				<input type= "text" name = "nombre" class = "data-input" placeholder="Ingresa tu nombre" require>
 				<input type= "text" name = "Apellidos"class = "data-input" placeholder="Ingresa tus apellidos">
 				<input type= "text" name = "Email"class = "data-input" placeholder="Ingresa tu e-mail">
 				<input type = "password"  name = "pass" class = "data-input" placeholder="Contraseña">
 				<input type ="submit" class = "data-button" name = "registro" value="Registrar">
 			</form>
 		</section>
-
-		<?php  
+		<?php 
 
 			if(isset($_POST['registro'])){
 
-				$incert = userController::insertUserController($_POST['nombre'], $_POST['Apellidos'],$_POST['Email'], $_POST['pass']);
-
+				$insert = userControll::inserUserController($_POST['nombre'], $_POST['Apellidos'], $_POST['Email'], $_POST['pass']);
 			}
-
 		?>
-		<a class = "url-data" href = "index" >Registrar</a>
 </body>
 </html>
