@@ -1,0 +1,1 @@
+En esta rama se encarga de la configuración de url del sitio la michoacana, en donde explica que en caso de que no exista el archivo index esta no muestre la lista de directorios. en el siguinete video se explica a detalle.
