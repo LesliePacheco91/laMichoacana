@@ -4,9 +4,6 @@ En esta rama, contiene el codigo para conectar una base de datos MySQL con PHP u
 se adjunta el video de la explicación  [ver video ](https://youtu.be/eX8R5HG8slU)
 
 
-Este código mostrará una miniatura del video y, al hacer clic en ella, abrirá el video de YouTube en una nueva pestaña.
-
-
 ## Código de la conexion
 
 ```php
