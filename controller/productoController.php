@@ -22,7 +22,7 @@ class productoController{
 
                 if(move_uploaded_file($imgTmp, $uploadFile)){
 
-                    echo "Se ha subido la imagen de manera correcta";
+                    echo "Se há registrado el producto";
                 }else{
                     echo "error";
                 }
@@ -34,6 +34,15 @@ class productoController{
 
        }
         
+    }
+
+    static public function verProductosController(){
+     
+        $verProd = productoMdl::verProductosMdl();
+
+        return  $verProd;
+       
+
     }
 }
 

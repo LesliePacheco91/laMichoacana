@@ -20,6 +20,14 @@ class productoMdl extends conexion{
         }
 
     }
+
+    static public function verProductosMdl(){
+
+        $data = conexion::conectar()->prepare("SELECT * FROM producto ORDER BY nombre ASC ");
+        $data ->execute();
+        return $data->fetchAll();
+
+    }
 }
 
 

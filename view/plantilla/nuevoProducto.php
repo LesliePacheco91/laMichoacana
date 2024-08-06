@@ -10,11 +10,11 @@
 </head>
 <body class = "body-contend">	
 		<header class="head-home">
-			<img src="img/Logo Small Hi.png" width="100%">
-			<a class = "buttom-menu" href = "home.html"> <i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
-			<a class = "buttom-menu" href = "clientes.html"> <i class="fa fa-users-line" aria-hidden="true"></i> Clientes</a>
+			<img src="view/img/Logo Small Hi.png" width="100%">
+			<a class = "buttom-menu" href = "home"> <i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
+			<a class = "buttom-menu" href = "clientes"> <i class="fa fa-users-line" aria-hidden="true"></i> Clientes</a>
 			<!--<a class = "buttom-menu" href = "home.html"> <i class="fa fa-tags" aria-hidden="true"></i> Ventas</a>-->
-			<a class = "buttom-menu" href = "index.html"><i class="fa fa-power-off"></i> Salir</a>
+			<a class = "buttom-menu" href = "index"><i class="fa fa-power-off"></i> Salir</a>
 		</header>
 		<section class = "content-data">
 
@@ -41,7 +41,7 @@
 
 						$prod = productoController::inserProdController($_POST['nombre'], $_POST['precio'], $_POST['existencia'],$imgSize, $imgName, $imgTmp);
 
-						
+
 
 					}
 				?>
