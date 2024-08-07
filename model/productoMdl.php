@@ -28,6 +28,19 @@ class productoMdl extends conexion{
         return $data->fetchAll();
 
     }
+
+    static public function ElinarProductoMdl($id){
+
+        $data = conexion::conectar()->prepare("DELETE FROM producto WHERE idproducto = :id ");
+        $data->bindParam(':id',$id, PDO::PARAM_INT);
+
+        if($data->execute()){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
 }
 
 

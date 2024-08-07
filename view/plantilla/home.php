@@ -1,6 +1,10 @@
 <?php 
 
 	$verProd = productoController::verProductosController();
+
+	if(isset($_GET['id'])){
+		$eliminarProd = productoController::eliminarProductoController($_GET['id']);
+	}
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +44,8 @@
 						<h5><?php echo $item['nombre'];?></h5>
 						<h1><?php echo $item['precio'];?></h1>
 						<p icons>
-							<button class ="icon-card"><i class="fa fa-trash" aria-hidden="true"></i></button>
+
+							<a href="index.php?url=home&id=<?php echo $item['idproducto'];?>" class ="icon-card"><i class="fa fa-trash" aria-hidden="true"></i></a>
 							<a href="modifica_producto.html" class = "icon-card"><i class="fa fa-file-edit" aria-hidden="true"></i></a>
 							<button class ="icon-card" id="icon-shop" onclick="adCard(1);" data-id = "1"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
 

@@ -41,8 +41,15 @@ class productoController{
         $verProd = productoMdl::verProductosMdl();
 
         return  $verProd;
-       
+    }
 
+    static public function eliminarProductoController($id){
+
+        $eliminarProd = productoMdl::ElinarProductoMdl($id);
+
+        if($eliminarProd == true){
+            header('Location:home');
+        }
     }
 }
 
