@@ -9,7 +9,7 @@ class PlantillaMdl{
 			"carrito" == $url || 
 			"clientes" == $url ||
 			"home" == $url ||
-			"modifica_producto" == $url ||	
+			"modificaProducto" == $url ||	
 			"nuevoProducto" == $url){
 
 			$modulo = "view/plantilla/".$url.".php";
@@ -17,10 +17,7 @@ class PlantillaMdl{
 		}else{
 			$modulo = "view/plantilla/index.php";
 		}
-
 		return $modulo;
-
-
 	}
 
 }

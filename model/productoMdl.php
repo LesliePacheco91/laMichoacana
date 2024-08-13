@@ -29,11 +29,56 @@ class productoMdl extends conexion{
 
     }
 
-    static public function ElinarProductoMdl($id){
+    static public function EliminarProductoMdl($id){
 
         $data = conexion::conectar()->prepare("DELETE FROM producto WHERE idproducto = :id ");
         $data->bindParam(':id',$id, PDO::PARAM_INT);
 
+        if($data->execute()){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+    static public function filtroProdMdl($id){
+
+        $data = conexion::conectar()->prepare("SELECT * FROM producto WHERE idproducto = :id ");
+
+        $data ->bindParam(':id',$id, PDO::PARAM_INT);
+        
+        $data->execute();
+        return $data->fetch();
+    }
+
+    static public function updateProdImgMdl($id, $nom, $pre,$stok, $nameImg){
+
+        $data = conexion::conectar()->prepare(" UPDATE producto SET nombre =:nom, precio=:pre, existencia =:stok, imagen = :img WHERE idproducto = :id ");
+
+        $data ->bindParam(':id',$id, PDO::PARAM_INT);
+        $data ->bindParam(':nom',$nom, PDO::PARAM_STR);
+        $data ->bindParam(':pre',$pre, PDO::PARAM_STR);
+        $data ->bindParam(':stok',$stok, PDO::PARAM_INT);
+        $data ->bindParam(':img',$nameImg, PDO::PARAM_STR);
+        
+        if($data->execute()){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+
+    static public function updateProdMdl($id,$nom, $pre,$stok){
+
+        $data = conexion::conectar()->prepare(" UPDATE producto SET nombre =:nom, precio=:pre, existencia =:stok  WHERE idproducto = :id ");
+
+        $data ->bindParam(':id',$id, PDO::PARAM_INT);
+        $data ->bindParam(':nom',$nom, PDO::PARAM_STR);
+        $data ->bindParam(':pre',$pre, PDO::PARAM_STR);
+        $data ->bindParam(':stok',$stok, PDO::PARAM_INT);
+        
         if($data->execute()){
             return true;
         }else{

@@ -3,7 +3,9 @@
 	$verProd = productoController::verProductosController();
 
 	if(isset($_GET['id'])){
-		$eliminarProd = productoController::eliminarProductoController($_GET['id']);
+
+
+		$eliminarProd = productoController::eliminarProductoController($_GET['id'], $_GET['img']);
 	}
 ?>
 
@@ -45,10 +47,14 @@
 						<h1><?php echo $item['precio'];?></h1>
 						<p icons>
 
-							<a href="index.php?url=home&id=<?php echo $item['idproducto'];?>" class ="icon-card"><i class="fa fa-trash" aria-hidden="true"></i></a>
-							<a href="modifica_producto.html" class = "icon-card"><i class="fa fa-file-edit" aria-hidden="true"></i></a>
-							<button class ="icon-card" id="icon-shop" onclick="adCard(1);" data-id = "1"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
-
+							<a  class = "icon-card" href = "index.php?url=home&id=<?php echo $item['idproducto'];?>&img=<?php echo $item['imagen']; ?>">
+							<i class="fa fa-trash" aria-hidden="true"></i>
+							</a>
+			
+							<a href="index.php?url=modificaProducto&id=<?php echo $item['idproducto']?>" class = "icon-card">
+								<i class="fa fa-file-edit" aria-hidden="true"></i>
+							</a>
+							<button class ="icon-card" id="icon-shop" data-id = "1"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button
 						</p>
 					</li>
 					<?php endforeach; ?>
