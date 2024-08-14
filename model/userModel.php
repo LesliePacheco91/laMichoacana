@@ -18,6 +18,27 @@ class userModel extends conexion{
             return false;
         }
     }
+
+    static public function oginController($user, $pass){
+
+        $data = conexion::conectar()->prepare("SELECT * FROM usuarios WHERE email = :us and contrasenia = :pas");
+
+        $data->bindParam(":us", $user, PDO::PARAM_STR);
+        $data->bindParam(":pas", $pass, PDO::PARAM_STR);
+
+        $data->execute();
+        return $data->fetch();
+    
+    }
+
+    static public function verClientesController(){
+
+        $data = conexion::conectar()->prepare("SELECT * FROM usuarios WHERE tipo = 2");
+
+        $data->execute();
+        return $data->fetchAll();
+
+    }
 }
 
 ?>

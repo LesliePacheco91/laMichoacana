@@ -24,7 +24,41 @@ class userControll{
 
       }
 
+    }
 
+    static public function loginController($user, $pass){
+
+      
+
+      if(preg_match('/^[a-zA-Z0-9]+$/', $pass)){
+
+        $newLog = userModel::oginController($user, $pass);
+
+        if($newLog != false || $newLog != null){
+          
+          $_SESSION['VALIDA'] = true;
+          $_SESSION['id'] = $newLog['idusuario'];
+          $_SESSION['type'] = $newLog['tipo'];
+
+          $_SESSION['usuario'] = $newLog['nombre'].' '.$newLog['apellidos'];
+
+          header("location:home");
+
+
+        }else{
+          echo "usuario y/o contraseña incorrectos";
+        }
+
+      }else{
+        echo "no se permiten caracteres especiales en este campo";
+      }
+
+    }
+
+    static public function verClientesController(){
+      
+      $verCLientes = userModel::verClientesController();
+      return $verCLientes;
     }
 
 }
