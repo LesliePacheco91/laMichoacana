@@ -10,13 +10,21 @@
 		<h1 class = "title-login">Inicio de sesión</h1>
 		<section class = "secction-login">
 			<img src="view/img/Logo Small Hi.png" class="img-login">
-			<form meta = "POST">
+			<form method = "POST">
 				<input type= "email" name = "email" class = "data-input" placeholder="Ingresa tu e-mail">
 				<input type = "password" name = "pass" class = "data-input" placeholder="Contraseña">
 				<input type ="submit" name = "boton" class = "data-button" value="Iniciar">
 			</form>
 		</section>
 		<a class = "url-data" href = "registro" >Registrarse</a>
+
+		<?php 
+			if(isset($_POST['boton'])){
+
+				$newLogin = userControll::loginController($_POST['email'], $_POST['pass']);
+			}
+		
+		?>
 
 
 </body>

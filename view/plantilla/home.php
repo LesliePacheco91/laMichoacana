@@ -1,3 +1,14 @@
+<?php 
+
+	$verProd = productoController::verProductosController();
+
+	if(isset($_GET['id'])){
+
+
+		$eliminarProd = productoController::eliminarProductoController($_GET['id'], $_GET['img']);
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,125 +16,54 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="view/style/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-	<link rel="stylesheet" href="viewport/fonts/css/all.css">
-	
-	<title></title>
+	<link rel="stylesheet" href="view/fonts/css/all.css">
+	<title>La michoacana</title>
 </head>
 <body class = "body-contend">	
-		<header class="head-home">
-			<img src="img/Logo Small Hi.png" width="100%">
-			<a class = "buttom-menu" href = "home"> <i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
-			<a class = "buttom-menu" href = "clientes"> <i class="fa fa-users-line" aria-hidden="true"></i> Clientes</a>
-			<a class = "buttom-menu" href = "carrito"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrito</a>
-			<a class = "buttom-menu" href = "index"><i class="fa fa-power-off"></i> Salir</a>
-		</header>
+		<?php 
+			include ("header.php");
+		?>
 		<section class = "content-data">
 
 			<div class ="head-data">
 				<h1>Productos</h1>
+
+				<?php if($_SESSION['type'] == 2){?>
 				<div class = "shopping-cart">
 					<i class="fa fa-shopping-cart" aria-hidden="true"></i><h1 id ="total-shop"></h1>
 				</div>
 
+				<?php } else if($_SESSION['type'] == 1){ ?>
 				<a href = "nuevoProducto" class="buttom-data"> <i class = "fa fa-upload"></i> Nuevo Producto</a>
+				<?php }?>
+				<h3>Bienvenido <?php echo $_SESSION['usuario']; ?></h3>
 			</div>
 			<div class = "body-data">
-				
-				<ul class = "content-card">
+				<ul class = "content-card">	
+					<?php foreach($verProd as $item): ?>				
 					<li class = "card">
-						<img src = "products/fresa.webp" class = "img-data">
-						<h5>Nieve de Fresa</h5>
-						<h1>$12.75</h1>
+						<img src = "view/products/<?php echo $item['imagen'];  ?>" class = "img-data">
+						<h4><?php echo $item['nombre'];?></h4>
+						<em>Existencias: <?php echo $item['existencia'];?></em>
+						<h1>$<?php echo $item['precio'];?></h1>
 						<p icons>
-							<button class ="icon-card" id="icon-shop" onclick="adCard(1);" data-id = "1"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+
+						<?php if($_SESSION['type'] == 1){?>
+
+							<a  class = "icon-card" href = "index.php?url=home&id=<?php echo $item['idproducto'];?>&img=<?php echo $item['imagen']; ?>">
+							<i class="fa fa-trash" aria-hidden="true"></i>
+							</a>
+			
+							<a href="index.php?url=modificaProducto&id=<?php echo $item['idproducto']?>" class = "icon-card">
+								<i class="fa fa-file-edit" aria-hidden="true"></i>
+							</a>
+						<?php }else if($_SESSION['type'] == 2){?>
+							
+							<button class ="icon-card" id="icon-shop" data-id = "1"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button
+						<?php }?>
 						</p>
 					</li>
-					
-					<li class = "card">
-						<img src = "products/fresa-concrema.webp" class = "img-data">
-						<h5>Nieve Fresas con crema</h5>
-						<h1>$12.75</h1>
-						<p icons>
-							<button class ="icon-card" id="icon-shop" onclick="adCard(2);" ><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
-						</p>
-					</li>
-
-					<li class = "card">
-						<img src = "products/nieve-mango-chamoy.webp" class = "img-data">
-						<h5>Nieve Mando y chamoy</h5>
-						<h1>$12.75</h1>
-						<p icons>
-							<button class ="icon-card"><i class="fa fa-trash" aria-hidden="true"></i></button>
-							<a href="modifica_producto.html" class = "icon-card"><i class="fa fa-file-edit" aria-hidden="true"></i></a>
-
-						</p>
-					</li>
-
-					<li class = "card">
-						<img src = "products/fresa-chicle.webp" class = "img-data">
-						<h5>Nieve de chicle</h5>
-						<h1>$12.75</h1>
-					</li>
-
-					<li class = "card">
-						<img src = "products/nieve-limon.webp" class = "img-data">
-						<h5>Nieve de limón</h5>
-						<h1>$12.75</h1>
-					</li>
-					
-					<li class = "card">
-						<img src = "products/paleta-kiwi.jpg" class = "img-data">
-						<h5>Paleta de Kiwi</h5>
-						<h1>$12.75</h1>
-					</li>
-
-					<li class = "card">
-						<img src = "products/paleta-piña.jpg" class = "img-data">
-						<h5>Paleta de Piña</h5>
-						<h1>$12.75</h1>
-					</li>
-
-					<li class = "card">
-						<img src = "products/fresa.webp" class = "img-data">
-						<h5>Nieve de Fresa</h5>
-						<h1>$12.75</h1>
-					</li>
-					
-					<li class = "card">
-						<img src = "products/fresa-concrema.webp" class = "img-data">
-						<h5>Nieve Fresas con crema</h5>
-						<h1>$12.75</h1>
-					</li>
-
-					<li class = "card">
-						<img src = "products/nieve-mango-chamoy.webp" class = "img-data">
-						<h5>Nieve Mando y chamoy</h5>
-						<h1>$12.75</h1>
-					</li>
-
-					<li class = "card">
-						<img src = "products/fresa-chicle.webp" class = "img-data">
-						<h5>Nieve de chicle</h5>
-						<h1>$12.75</h1>
-					</li>
-
-					<li class = "card">
-						<img src = "products/nieve-limon.webp" class = "img-data">
-						<h5>Nieve de limón</h5>
-						<h1>$12.75</h1>
-					</li>
-					
-					<li class = "card">
-						<img src = "products/paleta-kiwi.jpg" class = "img-data">
-						<h5>Paleta de Kiwi</h5>
-						<h1>$12.75</h1>
-					</li>
-
-					<li class = "card">
-						<img src = "products/paleta-piña.jpg" class = "img-data">
-						<h5>Paleta de Piña</h5>
-						<h1>$12.75</h1>
-					</li>
+					<?php endforeach; ?>
 				</ul>
 			</div>
 			

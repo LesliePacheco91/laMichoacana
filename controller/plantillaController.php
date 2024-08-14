@@ -7,19 +7,25 @@ class plantillaController{
 		include "view/plantilla.php";
 	}
 
-	static public function tomarUrl(){
+	static public function tomarUrl($url){
 
-		if(isset($_GET['url'])){
+		if(isset($url)){
 
-			$url = $_GET['url'];
+			$ur = $url;
 		}else{
 
-			$url = "index";
+			$ur = "index";
 		}
 
-		$verPlantilla = PlantillaMdl::VerUrlMdl($url);
+		$verPlantilla = PlantillaMdl::VerUrlMdl($ur);
 
 		include $verPlantilla;
+	}
+
+	static public function menuController($tipo){
+
+		$menu = PlantillaMdl::menuModel($tipo);
+		return $menu;
 	}
 }
 
