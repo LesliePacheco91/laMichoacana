@@ -15,9 +15,9 @@ Se utilizaron tecnologías como
 
 aplicando el modelo Vista-Controlador (MVC) y programación orientada a objetos para asegurar una estructura clara y escalable. El sistema fue diseñado con un enfoque en la usabilidad y la eficiencia operativa.
 
-# Videos con la explicación del proceso de desarrollo
+# 📺 Videos con la explicación del proceso de desarrollo
 
-[▶️ YouTube][Configuración de Directorios y Enlaces en PHP](https://youtu.be/haNCMAyFWjQ)
+[Configuración de Directorios y Enlaces en PHP](https://youtu.be/haNCMAyFWjQ)
 
 [Conexion a la base de datos PHP MySql Server PDO](https://youtu.be/eX8R5HG8slU)
 
