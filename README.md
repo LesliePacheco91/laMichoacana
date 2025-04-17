@@ -31,7 +31,7 @@ aplicando el modelo Vista-Controlador (MVC) y programación orientada a objetos 
 
 
 # Pantallas
-## vista Vendedor
+## Vista Vendedor
 
 ![inicio](capturas/1.png)
 
@@ -43,7 +43,7 @@ aplicando el modelo Vista-Controlador (MVC) y programación orientada a objetos 
 
 ![inicio](capturas/5.png)
 
-## vista Cliente
+## Vista Cliente
 
 ![inicio](capturas/6.png)
 
