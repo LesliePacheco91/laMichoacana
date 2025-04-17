@@ -1,8 +1,4 @@
 # La michoacana
-#### By: Leslie Pacheco
-
-
-# Descripción
 
 La aplicación permite el registro, modificación y eliminación de productos, así como el control de inventario y la gestión de ventas en tiempo real. Además, incluye funcionalidades de inicio de sesión para distintos tipos de usuarios, control de accesos.
 Se utilizaron tecnologías como 
