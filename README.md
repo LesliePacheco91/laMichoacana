@@ -19,6 +19,15 @@ aplicando el modelo Vista-Controlador (MVC) y programación orientada a objetos 
 
 [Configuración de Directorios y Enlaces en PHP](https://youtu.be/haNCMAyFWjQ)
 
+[Conexion a la base de datos PHP MySql Server PDO](https://youtu.be/eX8R5HG8slU)
+
+[Insertar datos PHP MVC](https://youtu.be/ny0Qf73tm-o)
+
+[Visualización de datos PHP MySQL server PDO MVC](https://youtu.be/pIaXw_XPbA8)
+
+[Eliminar registro MySQL server PHP PDO](https://youtu.be/nxc9uVgbzuo)
+
+[Actualizar datos PHP MySQL serve MVC PDO](https://youtu.be/nn8M5gm27Q0)
 
 
 # Pantallas
