@@ -18,4 +18,4 @@ aplicando el modelo Vista-Controlador (MVC) y programación orientada a objetos 
 
 #Pantallas
 
-![inicio](capturas/1 .png)
+![inicio](capturas/1.png)
