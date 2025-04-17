@@ -1,5 +1,5 @@
 # La michoacana
-#### By: G Leslie Pacheco
+#### By: Leslie Pacheco
 ## Definición del proyecto
 Paratica en el que desarrolló una plataforma web para administrar y controlar las ventas de los productos de La Michoacana
 
