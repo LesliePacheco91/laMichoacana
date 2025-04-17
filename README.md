@@ -16,3 +16,6 @@ Se utilizaron tecnologías como
 aplicando el modelo Vista-Controlador (MVC) y programación orientada a objetos para asegurar una estructura clara y escalable. El sistema fue diseñado con un enfoque en la usabilidad y la eficiencia operativa.
 
 
+#Pantallas
+
+![inicio](capturas/1.png)
