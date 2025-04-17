@@ -15,6 +15,11 @@ Se utilizaron tecnologías como
 
 aplicando el modelo Vista-Controlador (MVC) y programación orientada a objetos para asegurar una estructura clara y escalable. El sistema fue diseñado con un enfoque en la usabilidad y la eficiencia operativa.
 
+# videos con la explicación del proceso de desarrollo
+
+[Configuración de Directorios y Enlaces en PHP](https://youtu.be/haNCMAyFWjQ)
+
+
 
 # Pantallas
 ## vista Vendedor
