@@ -9,7 +9,7 @@ Se utilizaron tecnologías como
 ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=flat&logo=apache&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-%2300000f.svg?style=flat&logo=mysql&logoColor=white)
 
-aplicando el modelo Vista-Controlador (MVC) y programación orientada a objetos para asegurar una estructura clara y escalable, asi como PDO para la gestion de consultas a la base de datos. El sistema fue diseñado con un enfoque en la usabilidad y la eficiencia operativa.
+aplicando el modelo Vista-Controlador (MVC) y programación orientada a objetos para asegurar una estructura clara y escalable, asi como PDO para la gestión de consultas a la base de datos. El sistema fue diseñado con un enfoque en la usabilidad y la eficiencia operativa.
 
 # 📺 Videos con la explicación del proceso de desarrollo
 
